@@ -8,5 +8,52 @@
     <script src="main.js" defer></script>
     <title>Library</title>
   </head>
-  <body></body>
+  <body>
+    <div class="page">
+      <button id="add-book">Add Book</button>
+
+      <table>
+        <thead>
+          <td></td>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Date</th>
+          <th scope="col">Pages</th>
+          <th scope="col">Read</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <form action="" method="POST" class="form hidden">
+        <div class="form__label-input-block">
+          <label for="form-book-title" class="form__label">Title</label>
+          <input type="text" id="form-book-title" name="title" class="form__input" required />
+          <div id="form-book-title-error" class="hidden">Book title cannot be empty</div>
+        </div>
+        <div class="form__label-input-block">
+          <label for="form-book-author" class="form__label">Author</label>
+          <input type="text" id="form-book-author" name="author" class="form__input" required />
+          <div id="form-book-author-error" class="hidden">Book author cannot be empty</div>
+        </div>
+        <div class="form__label-input-block">
+          <label for="form-book-date" class="form__label">Date</label>
+          <input type="date" id="form-book-date" name="date" class="form__input" />
+          <div id="form-book-date-error" class="hidden"></div>
+        </div>
+        <div class="form__label-input-block">
+          <label for="form-book-pages" class="form__label">Pages</label>
+          <input type="number" min="0" id="form-book-pages" name="pages" class="form__input" />
+          <div id="form-book-pages-error" class="hidden"></div>
+        </div>
+        <div class="form__label-input-block">
+          <label for="form-book-read" class="form__label">Read</label>
+          <input type="checkbox" id="form-book-read" name="read" class="form__input" />
+          <div id="form-book-read-error" class="hidden"></div>
+        </div>
+        <button type="reset" id="form__cancel" class="form__cancel">Cancel</button>
+        <button type="submit" id="form__add" class="form__submit hidden">Confirm</button>
+        <button type="submit" id="form__edit" class="form__submit hidden">Confirm</button>
+      </form>
+    </div>
+  </body>
 </html>
